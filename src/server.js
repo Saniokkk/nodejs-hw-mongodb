@@ -3,7 +3,6 @@ import cors from 'cors';
 import pino from 'pino-http';
 
 import { getEnvVar } from './utils/getEnvVar.js';
-// import { validateObjectId } from './utils/validateObjectId.js';
 import { getAllContacts, getStudentById } from './services/contacts.js';
 
 const PORT = Number(getEnvVar('PORT'));
