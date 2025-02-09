@@ -4,7 +4,7 @@ import pino from 'pino-http';
 
 import { getEnvVar } from './utils/getEnvVar.js';
 import { getAllContacts, getStudentById } from './services/contacts.js';
-import { validateObjectId } from './utils/validateObjectId.js';
+// import { validateObjectId } from './utils/validateObjectId.js';
 
 const PORT = Number(getEnvVar('PORT'));
 
@@ -36,7 +36,7 @@ export const setupServer = async () => {
     });
   });
 
-  app.get('/contacts/:contactId', validateObjectId, async (req, res) => {
+  app.get('/contacts/:contactId', async (req, res) => {
     const { contactId } = req.params;
     const contact = await getStudentById(contactId);
 
