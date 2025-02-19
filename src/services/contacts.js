@@ -9,3 +9,7 @@ export const getStudentById = async (contactId) => {
   const contact = await ContactsCollection.findById(contactId);
   return contact;
 };
+export const createContact = async (newContact) => {
+  const contact = await ContactsCollection.create(newContact);
+  return contact;
+};
